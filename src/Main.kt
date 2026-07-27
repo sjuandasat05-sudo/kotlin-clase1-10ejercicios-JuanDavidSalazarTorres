@@ -101,5 +101,29 @@ fun main() {
 
     println("El promedio es ${promedio}")
 
-}
 
+//===================EJERCICIO 6==============//
+
+    println("-------------Ejercicio 6--------------")
+
+    println("Validador de datos (Null Safety)")
+
+    println("Escribe tu nombre")
+    val nombre_dato = readln().toString()
+
+    println("Dame tu edad")
+    val edad_dato = readln().toIntOrNull()
+
+    println("Coloca tu altura")
+    val altura_dato = readln().toFloatOrNull()
+
+    println("Tu nombre es ${nombre_dato}")
+
+    println("Tienes ${edad_dato} años")
+
+    println("Y mides ${altura_dato}")
+
+
+
+
+}
