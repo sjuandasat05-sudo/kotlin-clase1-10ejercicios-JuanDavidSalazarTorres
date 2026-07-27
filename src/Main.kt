@@ -39,7 +39,7 @@ fun main() {
 
 // ==============EJERCICIO 3 ===========//
 
-    print("---------Ejercicio3---------")
+    println("---------Ejercicio3---------")
 
     println("Clasificador de edad")
 
@@ -53,7 +53,20 @@ fun main() {
         edad_clasificacion >= 18  -> println("Eres mayor de edad")
     }
 
-    
+// ==============EJERCICIO 4 =============//
+
+    println("----------Ejercicio4--------")
+
+    println("Contador regresivo")
+
+    println("Escribe un numero")
+    var usuario = readln().toInt()
+
+    while(usuario >= 0){
+
+        println(usuario)
+        usuario -= 1
+    }
 
 
 
