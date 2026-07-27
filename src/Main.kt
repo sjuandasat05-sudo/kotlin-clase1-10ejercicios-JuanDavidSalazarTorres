@@ -49,8 +49,8 @@ fun main() {
 
     when {
 
-        edad_clasificacion <= 17  -> println("Eres menor de edad")
-        edad_clasificacion >= 18  -> println("Eres mayor de edad")
+        edad_clasificacion <= 17 -> println("Eres menor de edad")
+        edad_clasificacion >= 18 -> println("Eres mayor de edad")
     }
 
 // ==============EJERCICIO 4 =============//
@@ -62,18 +62,44 @@ fun main() {
     println("Escribe un numero")
     var usuario = readln().toInt()
 
-    while(usuario >= 0){
+    while (usuario >= 0) {
 
         println(usuario)
         usuario -= 1
     }
 
+// =============EJERCICIO 5 ===============//
 
+    println("----------Ejercicio5----------")
 
+    println("Pormedio de 5 notas")
 
+    println("Primer nota")
+    val nota_1 = readln().toInt().toFloat()
 
+    println("Segunda nota")
+    val nota_2 = readln().toInt().toFloat()
 
+    println("Tercera nota")
+    val nota_3 = readln().toInt().toFloat()
 
+    println("Cuarta nota")
+    val nota_4 = readln().toInt().toFloat()
 
+    println("Quinta nota")
+    val nota_5 = readln().toInt().toFloat()
+
+    val notas = listOf(nota_1, nota_2, nota_3, nota_4, nota_5)
+
+    var suma = 0.0
+
+    for (numero in notas) {
+        suma += numero
+    }
+
+    val promedio = suma // notas
+
+    println("El promedio es ${promedio}")
 
 }
+
