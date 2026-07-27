@@ -123,6 +123,40 @@ fun main() {
 
     println("Y mides ${altura_dato}")
 
+//====================EJERCICIO 7============//
+
+    println("----------Ejercicio 7-----------")
+
+    println("Funcion con parametros por defecto")
+
+    fun imprimirDatosPersonales(nombre: String = "Juan David Salazar Torres",edad:Int = 20,ciudad:String= "Medellin"){
+
+        println("Nombre de usuario $nombre")
+        println("Tiene $edad años de edad")
+        println("Y vive en la ciudad de $ciudad")
+
+    }
+
+//==================EJERCICIO 8 ==============//
+
+    println("----------Ejercicio 8------------")
+
+    println("Tabla de multiplicar")
+
+    //===Escribe cualquier numero======//
+    
+    println("Escribe el numero")
+    val multiplicacion = readln().toInt()
+
+    for(multiplicacion in 1..10){
+
+        println("Tabla del $multiplicacion")
+
+        for(i in 1..10){
+            println("$multiplicacion x $i = ${multiplicacion * i}")
+        }
+        println()
+    }
 
 
 
