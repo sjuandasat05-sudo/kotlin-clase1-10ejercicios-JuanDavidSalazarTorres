@@ -23,17 +23,38 @@ fun main() {
 
     println("Calculadora basica")
 
-    println("Escribe el primer numero")
+    print("Escribe el primer numero:")
     val numero_1 = readln().toInt()
 
-    println("Escribe el segundo numero")
+    print("Escribe el segundo numero:")
     val numero_2 = readln().toInt()
 
     println("Multiplicacion: ${numero_1 * numero_2}")
 
     println("Division: ${numero_1 / numero_2}")
 
+    println("Suma: ${numero_1 + numero_2}")
+
+    println("Resta: ${numero_1 - numero_2}")
+
+// ==============EJERCICIO 3 ===========//
+
+    print("---------Ejercicio3---------")
+
+    println("Clasificador de edad")
+
+
+    println("Coloca tu edad:")
+    val edad_clasificacion = readln().toInt()
+
+    when {
+
+        edad_clasificacion <= 17  -> println("Eres menor de edad")
+        edad_clasificacion >= 18  -> println("Eres mayor de edad")
+    }
+
     
+
 
 
 
