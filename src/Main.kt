@@ -144,7 +144,7 @@ fun main() {
     println("Tabla de multiplicar")
 
     //===Escribe cualquier numero======//
-    
+
     println("Escribe el numero")
     val multiplicacion = readln().toInt()
 
@@ -157,6 +157,20 @@ fun main() {
         }
         println()
     }
+
+//=================EJERCICIO 9=================//
+
+    println("-----------Ejercicio 9------------")
+
+    println("Conversor de temperatura")
+
+    fun celsiusAFahrenheit( celsius : Double ){
+
+    }
+    fun fahrenheitACelsius(fahrenheit: Double){
+
+    }
+    fun main()
 
 
 
