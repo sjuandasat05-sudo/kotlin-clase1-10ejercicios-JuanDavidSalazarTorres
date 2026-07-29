@@ -168,79 +168,74 @@ fun main() {
 
     println("Conversor de temperatura")
 
+    fun conversorTemperatura() {
 
-
-    fun celsiusAFahrenheit(celsius: Double): Double {
-        return (celsius * 9 / 5) + 32
-    }
-
-    fun fahrenheitACelsius(fahrenheit: Double): Double {
-        return (fahrenheit - 32) * 5 / 9
-    }
-
-    fun integrador() {
-
-        println("Conversor de temperatura")
+        println("Elige una opción:")
         println("1. Celsius a Fahrenheit")
         println("2. Fahrenheit a Celsius")
-
-        print("Seleccione una opción: ")
-        val opcion = readln().toInt()
+        print("Opción: ")
+        val opcion = readLine()?.toIntOrNull() ?: 0
 
         when (opcion) {
-
             1 -> {
-                print("Ingrese los grados Celsius: ")
-                val celsius = readln().toDouble()
-
-                println("Resultado: ${celsiusAFahrenheit(celsius)} °F")
+                print("Ingresa la temperatura en Celsius: ")
+                val celsius = readLine()?.toDoubleOrNull() ?: 0.0
+                val fahrenheit = (celsius * 9 / 5) + 32
+                println("$celsius °C equivalen a $fahrenheit °F")
             }
-
             2 -> {
-                print("Ingrese los grados Fahrenheit: ")
-                val fahrenheit = readln().toDouble()
-
-                println("Resultado: ${fahrenheitACelsius(fahrenheit)} °C")
+                print("Ingresa la temperatura en Fahrenheit: ")
+                val fahrenheit = readLine()?.toDoubleOrNull() ?: 0.0
+                val celsius = (fahrenheit - 32) * 5 / 9
+                println("$fahrenheit °F equivalen a $celsius °C")
             }
-
-            else -> {
-                println("Opción incorrecta.")
-            }
+            else -> println("Opción no válida")
         }
+        println()
     }
 
     //====================EJERCICIO 10==========//
 
     println("--------------Ejercicio 10--------------")
 
-    fun mostrarResumen(nombre: String, edad: Int, categoria: String, mensaje: String) {
-        println()
-        println("----- Resumen -----")
+    println("Ejercicio final")
+
+    fun resumenFinal() {
+        println("--- Ejercicio 10: Resumen Final (Integrador) ---")
+        print("Ingresa tu nombre: ")
+        val nombre = readLine()?.ifBlank { null } ?: "Desconocido"
+        print("Ingresa tu edad: ")
+        val edad = readLine()?.toIntOrNull() ?: 0
+
+        val categoria = when {
+            edad <= 12 -> "Niño"
+            edad in 13..17 -> "Adolescente"
+            edad in 18..59 -> "Adulto"
+            else -> "Adulto Mayor"
+        }
+
+        val mensaje = when (categoria) {
+            "Niño" -> "¡Disfruta tu niñez, $nombre!"
+            "Adolescente" -> "¡Sigue esforzándote, $nombre!"
+            "Adulto" -> "¡Éxitos en tu vida profesional, $nombre!"
+            else -> "¡Que sigas disfrutando la vida, $nombre!"
+        }
+
+        println("=== RESUMEN FINAL ===")
         println("Nombre: $nombre")
         println("Edad: $edad")
         println("Categoría: $categoria")
         println("Mensaje: $mensaje")
+        println()
     }
 
-    fun final() {
+    //---------------------------------------------//
 
-        println("Ingrese su nombre:")
-        val nombre = readln()
+    fun main(){
+        imprimirDatosPersonales()
+        conversorTemperatura()
+        resumenFinal()
+        main()
 
-        println("Ingrese su edad:")
-        val edad = readln().toInt()
-
-        var categoria = ""
-        var mensaje = ""
-
-        if (edad >= 18) {
-            categoria = "Mayor de edad"
-            mensaje = "Ya eres un adulto."
-        } else {
-            categoria = "Menor de edad"
-            mensaje = "Aún eres menor de edad."
-        }
-
-        mostrarResumen(nombre, edad, categoria, mensaje)
     }
 }
